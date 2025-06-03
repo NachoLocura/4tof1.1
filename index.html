@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendario de Eventos - Junio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="admin-panel">
+    <h1>✨ Calendario de Eventos - Junio</h1>
+
+    <div id="calendario"></div>
+
+    <!-- Panel administrador con tabla mejorada -->
+    <div id="panel-admin" style="display: none; margin-top: 30px;">
+      <h2>Administrador</h2>
+      <table style="width: 100%; border-collapse: collapse; gap: 20px;">
+        <thead>
+          <tr>
+            <th style="text-align: left; padding: 10px; border-bottom: 2px solid #444;">Eventos activos</th>
+            <th style="text-align: left; padding: 10px; border-bottom: 2px solid #444;">Agregar nuevo evento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="vertical-align: top; padding: 10px; border-right: 2px solid #444;">
+              <ul id="eventos-activos" style="list-style: none; padding: 0; margin: 0;"></ul>
+            </td>
+            <td style="vertical-align: top; padding: 10px;">
+              <form id="formulario-evento" onsubmit="event.preventDefault(); cargarFormularioEvento();">
+                <label style="display: block; margin-bottom: 10px;">
+                  Día:
+                  <select id="dia-seleccion" style="width: 100%; padding: 5px; margin-top: 5px;">
+                    <!-- Días se cargan dinámicamente con JS -->
+                  </select>
+                </label>
+
+                <label style="display: block; margin-bottom: 10px;">
+                  Materia:
+                  <select id="materia-seleccion" style="width: 100%; padding: 5px; margin-top: 5px;">
+                    <option value="Software II">Software II</option>
+                    <option value="Hardware II">Hardware II</option>
+                    <option value="Química">Química</option>
+                    <option value="Técnicas Digitales I">Técnicas Digitales I</option>
+                    <option value="Redes">Redes</option>
+                    <option value="Ética">Ética</option>
+                    <option value="Análisis Matemático">Análisis Matemático</option>
+                    <option value="Lengua">Lengua</option>
+                    <option value="Inglés">Inglés</option>
+                    <option value="Base de Datos I">Base de Datos I</option>
+                    <option value="Sistema Operativo II">Sistema Operativo II</option>
+                    <option value="Programación I">Programación I</option>
+                    <option value="Gestión de Organizaciones">Gestión de Organizaciones</option>
+                  </select>
+                </label>
+
+                <label style="display: block; margin-bottom: 10px;">
+                  Tipo de evento:
+                  <select id="tipo-evento" style="width: 100%; padding: 5px; margin-top: 5px;">
+                    <option value="Prueba">Prueba</option>
+                    <option value="Lección">Lección</option>
+                    <option value="Carpeta">Carpeta</option>
+                    <option value="Recuperatorio">Recuperatorio</option>
+                    <option value="Ausencia">Ausencia</option>
+                    <option value="TrabajoPractico">Trabajo Práctico</option>
+                  </select>
+                </label>
+
+                <label style="display: block; margin-bottom: 20px;">
+                  Hora (solo si es Ausencia):
+                  <input type="time" id="hora-ausencia" style="width: 100%; padding: 5px; margin-top: 5px;" />
+                </label>
+
+                <button type="submit" style="padding: 10px 20px; background-color: #2980b9; color: white; border: none; border-radius: 6px; cursor: pointer;">
+                  Cargar evento
+                </button>
+              </form>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mejor tipografía */
+  margin: 0;
+  background-color: #1e1e2f;
+  color: #f0f0f0;
+  padding: 20px;
+}
+
+.admin-panel {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #2b2b3c;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #f8f8f8;
+}
+
+/* Calendario con celdas más grandes */
+#calendario {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.celda-dia {
+  background-color: #363648;
+  border-radius: 8px;
+  padding: 15px;
+  min-height: 130px; /* Más alto */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 1.05em; /* texto un poco más grande */
+}
+
+.celda-dia h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+  color: #a1c4fd;
+}
+
+/* Clases de evento con colores y separamos turno mañana y tarde */
+.evento {
+  font-size: 0.95em;
+  background-color: #2c3e50;
+  padding: 6px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  color: white;
+}
+
+.evento.evaluacion {
+  background-color: #e74c3c;
+}
+
+.evento.leccion {
+  background-color: #2980b9;
+}
+
+.evento.recuperatorio {
+  background-color: #f39c12;
+}
+
+.evento.ausencia {
+  background-color: #7f8c8d;
+}
+
+.evento.entregadecarpetas {
+  background-color: #9b59b6;
+}
+
+.evento.lecctp {
+  background-color: #16a085;
+}
+
+/* Estilos para distinguir turnos */
+.turno-manana {
+  font-weight: bold;
+  color: #f39c12; /* naranja */
+}
+
+.turno-tarde {
+  font-weight: bold;
+  color: #3498db; /* azul */
+}
+
+.turno-noche {
+  font-weight: bold;
+  color: #9b59b6; /* morado */
+}
